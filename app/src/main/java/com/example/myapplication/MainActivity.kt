@@ -19,9 +19,15 @@ class MainActivity : AppCompatActivity() {
             finish()
         }
 
-        home_mbti_information_btn.setOnClickListener {
-            val intent2 = Intent(this, TestWebview::class.java)
+        home_mbti_present_btn.setOnClickListener {
+            val intent2 = Intent(this, MbtiPresentFirstActivty::class.java)
             startActivity(intent2)
+            finish()
+        }
+
+        home_mbti_information_btn.setOnClickListener {
+            val intent3 = Intent(this, TestWebview::class.java)
+            startActivity(intent3)
             finish()
         }
     }

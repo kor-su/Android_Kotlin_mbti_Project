@@ -37,6 +37,9 @@
             android:parentActivityName=".MainActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
         </activity>
+        <activity android:name=".MbtiPresentFirstActivty"
+            android:exported="true">
+        </activity>
         <activity
             android:name=".TestWebview"
             android:exported="true">
