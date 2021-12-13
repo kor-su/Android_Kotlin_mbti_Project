@@ -98,7 +98,7 @@ class TestWebview : AppCompatActivity() {
         }
 
 
-        webView.loadUrl("file:///android_asset/mbti.html")
+        webView.loadUrl("file:///android_asset/MBTI.html")
     }
 
     inner class WebViewClientClass() : WebViewClient() {
