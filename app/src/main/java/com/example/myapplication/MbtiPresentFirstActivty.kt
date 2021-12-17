@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.view.View
@@ -8,7 +9,7 @@ import android.widget.GridView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
-class MbtiPresentFirstActivty : AppCompatActivity(), AdapterView.OnItemClickListener {
+class MbtiPresentFirstActivty : AppCompatActivity() , AdapterView.OnItemClickListener {
 
     private var gridView:GridView ? = null
     private var arrayList:ArrayList<GridItem> ? = null
@@ -19,10 +20,10 @@ class MbtiPresentFirstActivty : AppCompatActivity(), AdapterView.OnItemClickList
         setContentView(R.layout.activity_mbti_present_first)
 
         gridView = findViewById(R.id.mbti_present_grid_view)
-        arrayList = ArrayList()
+        arrayList = setDataList()
         gridviewAdapter = GridviewAdapter(applicationContext, arrayList!!)
         gridView?.adapter = gridviewAdapter
-        gridView?.onItemClickListener = this
+
     }
 
     private fun setDataList(): ArrayList<GridItem> {
@@ -43,8 +44,8 @@ class MbtiPresentFirstActivty : AppCompatActivity(), AdapterView.OnItemClickList
     }
 
     override fun onItemClick(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-        var gridItem: GridItem = arrayList!!.get(p2)
-        Toast.makeText(applicationContext, gridItem.name, Toast.LENGTH_SHORT).show()
-
+        var intent = Intent(this, MbtiPresentSecondActivity::class.java)
+        startActivity()
     }
+
 }
