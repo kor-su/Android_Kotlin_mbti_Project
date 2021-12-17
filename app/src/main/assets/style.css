@@ -47,6 +47,60 @@ button{
 	cursor: pointer;
 }
 
+#but1{
+    position: fixed;
+    bottom: 3.5em;
+    right: 3em;
+    background-color: rgba(255,255,255,.9);
+    color:#313943;
+    border:none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 0.5em;
+    box-shadow: 0 0 2em 0 rgba(0,0,0, .25);
+    transition:  all .3s ease-in-out;
+    display: inline-block;
+    opacity: 0;
+    text-decoration: none;
+
+
+}
+
+#but1.visible{
+    opacity: 1;
+}
+
+#but2{
+    position: fixed;
+    bottom: 1em;
+    right: 3em;
+    background-color: rgba(255,255,255,.9);
+    color:#313943;
+    border:none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 0.5em;
+    box-shadow: 0 0 2em 0 rgba(0,0,0, .25);
+    transition:  all .3s ease-in-out;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.showme {
+    border: 1px solid white;
+
+    -webkit-animation: fade-in-fwd 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in-fwd 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@keyframes fade-in-fwd{
+
+}
+
 @font-face{
 	src: url("fonts.ttf");
 	font-family: "fonts";
