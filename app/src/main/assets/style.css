@@ -13,7 +13,7 @@ h1{
 }
 
 li{
-	font-size: 80px;
+	font-size: 50px;
 	padding-left: 20px;
 	margin: 20px 20px 30px;
 	color: #51596A;
@@ -32,7 +32,7 @@ p{
 	color: #51596A;
 	font-family: "fonts";
 	margin: 0px 0px 17px;
-	font-size: 80px;
+	font-size: 50px;
 }
 
 button{
