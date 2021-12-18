@@ -12,7 +12,7 @@
         android:layout_marginTop="20dp"
         android:textStyle="bold"
         android:textColor="@color/brown"
-        android:text="MBTI 이름"
+        android:text="INFP 선물 추천"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <androidx.recyclerview.widget.RecyclerView

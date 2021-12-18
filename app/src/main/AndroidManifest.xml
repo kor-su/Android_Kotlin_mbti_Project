@@ -44,6 +44,10 @@
             android:name=".TestWebview"
             android:exported="true">
         </activity>
+        <activity
+            android:name=".MbtiPresentSecondActivity"
+            android:exported="true" >
+        </activity>
     </application>
 
 </manifest>

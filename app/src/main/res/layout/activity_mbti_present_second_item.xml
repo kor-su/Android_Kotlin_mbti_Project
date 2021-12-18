@@ -2,8 +2,10 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
     app:cardBackgroundColor="@android:color/white"
     app:cardCornerRadius="10dp"
     android:layout_margin="10dp">
@@ -14,43 +16,72 @@
         android:orientation="horizontal"
         android:padding="10dp" >
 
-        <RelativeLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp">
+            android:layout_height="120dp">
 
             <ImageView
                 android:id="@+id/mbti_present_recyclerview_image"
-                android:layout_width="150dp"
-                android:layout_height="100dp"
+                android:layout_width="130dp"
+                android:layout_height="110dp"
+                android:background="@color/white"
                 android:src="@drawable/mbti"
-                android:background="@color/white"/>
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/mbti_present_recyclerview_name"
-                android:layout_width="200dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginStart="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
                 android:layout_toEndOf="@id/mbti_present_recyclerview_image"
                 android:text="생선"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/mbti_present_recyclerview_price"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/mbti_present_recyclerview_image"
+                app:layout_constraintTop_toTopOf="@+id/mbti_present_recyclerview_image"
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/mbti_present_recyclerview_price"
-                android:layout_width="100dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="100dp"
-                android:layout_below="@id/mbti_present_recyclerview_name"
-                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mbti_present_recyclerview_name"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="72dp"
+                android:layout_toEndOf="@id/mbti_present_recyclerview_image"
                 android:gravity="center"
-                android:text="가격 원"
-                android:textSize="15sp"
-                android:textColor="#EF8257"/>
+                android:text="가격"
+                android:textColor="#EF8257"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/mbti_present_recyclerview_image"
+                app:layout_constraintTop_toTopOf="@+id/mbti_present_recyclerview_image"
+                app:layout_constraintVertical_bias="0.111" />
+
+            <TextView
+                android:id="@+id/mbti_present_recyclerview_priceWon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mbti_present_recyclerview_name"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="72dp"
+                android:layout_toEndOf="@id/mbti_present_recyclerview_image"
+                android:gravity="center"
+                android:text="원"
+                android:textColor="#EF8257"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/mbti_present_recyclerview_price"
+                app:layout_constraintTop_toTopOf="@+id/mbti_present_recyclerview_image"
+                app:layout_constraintVertical_bias="0.08" />
 
 
-        </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 
